@@ -25,7 +25,6 @@ function OrdersPage() {
 
     return (
         <div className="mt-5">
-            <PriceChart data={orders.completedOrders} />
             <h2 className='mt-4'>Pending Orders</h2>
             <ul className="list-group mb-3">
                 {orders.pendingOrders.map(order => (
@@ -42,6 +41,7 @@ function OrdersPage() {
                     </li>
                 ))}
             </ul>
+            <PriceChart data={orders.completedOrders} />
         </div>
     );
 }
